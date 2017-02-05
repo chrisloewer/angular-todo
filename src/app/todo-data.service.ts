@@ -22,7 +22,7 @@ export class TodoDataService {
 
   addTodo(todo: Todo): TodoDataService {
     if(!todo.id) {
-      todo.id = this.lastId + 1;
+      todo.id = ++this.lastId;
     }
 
     this.todos.push(todo);
